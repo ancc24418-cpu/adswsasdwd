@@ -5,5 +5,4 @@ scikit-learn
 streamlit
 pillow
 tensorflow
-cv2
 argparse
