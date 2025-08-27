@@ -1,6 +1,6 @@
 
 import cv2, numpy as np
-def deskew_and_crop(img):
+def preprocess_image(img):
     edges = cv2.Canny(img, 50, 150)
     coords = np.column_stack(np.where(edges > 0))
     if coords.shape[0] < 10:
@@ -17,7 +17,7 @@ def deskew_and_crop(img):
     rotated = cv2.warpAffine(img, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
     return rotated
 
-def adaptive_dot_detection(img_color):
+def detect_dots(img_color):
     gray = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY)
     gray = deskew_and_crop(gray)
     th = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
@@ -51,3 +51,8 @@ def adaptive_dot_detection(img_color):
     for row in rows:
         row.sort(key=lambda p: p[0])
     return rows, clean
+def draw_detected_dots(img, dot_rows):
+    for row in dot_rows:
+        for (x, y) in row:
+            cv2.circle(img, (x, y), 3, (0, 255, 0), -1)
+    return img
