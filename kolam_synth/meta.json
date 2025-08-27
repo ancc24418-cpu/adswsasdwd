@@ -1,0 +1,122 @@
+[
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_00.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_01.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_02.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_03.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_04.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_05.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_06.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_07.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_08.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/symmetric_09.png",
+    "class": "symmetric"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_00.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_01.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_02.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_03.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_04.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_05.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_06.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_07.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_08.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/tiling_09.png",
+    "class": "tiling"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_00.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_01.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_02.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_03.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_04.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_05.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_06.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_07.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_08.png",
+    "class": "freeform"
+  },
+  {
+    "file": "/mnt/data/kolam_synth/freeform_09.png",
+    "class": "freeform"
+  }
+]

@@ -1,0 +1,1 @@
+Place your sample kolam image named kolam_sample.jpg in this folder to test main_cv.py\n
