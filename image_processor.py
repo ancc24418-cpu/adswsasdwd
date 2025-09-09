@@ -63,9 +63,9 @@ def adaptive_dot_detection(img_gray):
     
     return rows, clean
 
-def draw_detected_dots(img, rows):
+def draw_detected_dots(img, dot_grid):
     output = img.copy()
-    for row in rows:
+    for row in dot_grid:
         for (x, y) in row:
             cv2.circle(output, (x, y), 5, (0, 255, 0), -1)
     return output

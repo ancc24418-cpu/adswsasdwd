@@ -1,6 +1,6 @@
 # streamlit_app.py - simple Streamlit interface to upload an image and render recreated kolam
 import streamlit as st
-from image_processor import preprocess_image, detect_dots, draw_detected_dots
+from image_processor import preprocess_image, adaptive_dot_detection, draw_detected_dots
 from grid import create_grid_from_detected_dots
 from renderer import render_grid_with_loops, animate_kolam
 import cv2
@@ -18,11 +18,11 @@ if uploaded is not None:
     st.image(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), caption='Uploaded image', use_column_width=True)
     if st.button('Analyze & Recreate'):
         original, gray, blur = preprocess_image(img)
-        circles = detect_dots(blur)
-        st.write(f'Detected {len(circles)} dots')
-        out = draw_detected_dots(original, circles)
+        dot_grid, clean_img = adaptive_dot_detection(blur)
+        total_dots = sum(len(row) for row in dot_grid)
+        st.write(f'Detected {total_dots} dots')
+        out = draw_detected_dots(original, dot_grid)
         st.image(cv2.cvtColor(out, cv2.COLOR_BGR2RGB), caption='Detected dots')
-        dot_grid = create_grid_from_detected_dots(circles)
         if not dot_grid:
             st.error('Could not form a dot grid from the detected dots')
         else:
