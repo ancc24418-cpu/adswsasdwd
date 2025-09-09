@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kolam Generator & Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎨 Kolam Generator & Analyzer</h1>
+            <p>Create beautiful traditional Indian kolam patterns</p>
+        </header>
+
+        <div class="main-content">
+            <div class="controls-panel">
+                <div class="upload-section">
+                    <h3>Upload Image</h3>
+                    <div class="file-upload">
+                        <input type="file" id="imageInput" accept="image/*" />
+                        <label for="imageInput" class="upload-btn">
+                            📁 Choose Image
+                        </label>
+                    </div>
+                    <div id="uploadedImage" class="uploaded-preview"></div>
+                </div>
+
+                <div class="generator-section">
+                    <h3>Or Generate Pattern</h3>
+                    <div class="grid-controls">
+                        <label>
+                            Rows: <input type="range" id="rowsSlider" min="3" max="12" value="6">
+                            <span id="rowsValue">6</span>
+                        </label>
+                        <label>
+                            Columns: <input type="range" id="colsSlider" min="3" max="12" value="6">
+                            <span id="colsValue">6</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="style-section">
+                    <h3>Motif Style</h3>
+                    <select id="styleSelect">
+                        <option value="loop">Loop</option>
+                        <option value="spiral">Spiral</option>
+                        <option value="cross">Cross</option>
+                        <option value="diagonal">Diagonal Cross</option>
+                        <option value="tiling">Tiling</option>
+                        <option value="arc">Arc</option>
+                    </select>
+                </div>
+
+                <div class="animation-section">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="animateCheck">
+                        <span class="checkmark"></span>
+                        Animate Drawing
+                    </label>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="generateBtn" class="primary-btn">Generate Kolam</button>
+                    <button id="analyzeBtn" class="secondary-btn" disabled>Analyze Image</button>
+                    <button id="downloadBtn" class="download-btn" disabled>Download</button>
+                </div>
+            </div>
+
+            <div class="canvas-panel">
+                <div class="canvas-container">
+                    <canvas id="kolamCanvas" width="600" height="600"></canvas>
+                    <div id="loadingSpinner" class="spinner hidden">
+                        <div class="spinner-circle"></div>
+                        <p>Processing...</p>
+                    </div>
+                </div>
+                
+                <div class="info-panel">
+                    <div id="symmetryInfo" class="info-section hidden">
+                        <h4>Symmetry Analysis</h4>
+                        <div id="symmetryResults"></div>
+                    </div>
+                    
+                    <div id="detectionInfo" class="info-section hidden">
+                        <h4>Detection Results</h4>
+                        <div id="detectionResults"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="motifs.js"></script>
+    <script src="imageProcessor.js"></script>
+    <script src="gridUtils.js"></script>
+    <script src="renderer.js"></script>
+    <script src="analyzer.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

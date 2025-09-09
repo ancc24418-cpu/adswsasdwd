@@ -1,39 +1,47 @@
-    # Kolam Generator & Analyzer (Python)
+# Kolam Generator & Analyzer (Web)
 
-This repository contains a working Kolam (muggu/rangoli) analyzer and generator with OpenCV integration and a Streamlit app for interactive use.
+This is a web-based Kolam (muggu/rangoli) analyzer and generator that runs entirely in the browser using HTML5 Canvas and JavaScript.
 
 ## Features
-    - Dot detection from images using OpenCV
-    - Grid formation and symmetry analysis (reflections + rotations)
-    - Multiple motif styles (loop, arc, cross, diagonal cross, spiral, tiling)
-    - Animated drawing via matplotlib.animation
-    - Simple CNN placeholder for later training/integration
-    - Streamlit app for upload + motif selection + animated rendering
+- Interactive web interface for kolam generation
+- Image upload and basic dot detection
+- Grid formation and symmetry analysis (reflections + rotations)
+- Multiple motif styles (loop, arc, cross, diagonal cross, spiral, tiling)
+- Animated drawing using HTML5 Canvas
+- Responsive design that works on desktop and mobile
+- Download generated kolam as PNG image
 
-## Requirements
-    Recommended creating a virtualenv.
+## Usage
+Simply open `index.html` in a web browser or deploy to any static hosting service like Netlify, Vercel, or GitHub Pages.
 
-```bash
-    pip install -r requirements.txt
-    ```
+### Local Development
+1. Clone or download this repository
+2. Open `index.html` in a modern web browser
+3. Start creating kolam patterns!
 
-Optional for interactive canvas (install separately):
-    - streamlit-drawable-canvas (pip install streamlit-drawable-canvas)
+### Deployment
+This is a static web application that can be deployed to:
+- Netlify (drag and drop the folder)
+- Vercel
+- GitHub Pages
+- Any static hosting service
 
-    ## Run locally
-    - Run CLI image pipeline:
-      ```bash
-      python main_cv.py --image kolam_sample.jpg --style loop --animate True
-      ```
-    - Run Streamlit app:
-      ```bash
-      streamlit run streamlit_app.py
-      ```
+## How to Use
+1. **Generate Pattern**: Use the sliders to set grid dimensions, choose a motif style, and click "Generate Kolam"
+2. **Upload Image**: Upload an image with dot patterns for analysis and recreation
+3. **Customize**: Select different motif styles and enable animation
+4. **Download**: Save your created kolam as a PNG image
 
-Files of interest:
-- main.py (demo grid generation)
-- main_cv.py (image -> detect -> recreate)
-- streamlit_app.py (web UI)
-- motifs.py (motif functions)
-- renderer.py (rendering & animation)
-- image_processor.py (OpenCV dot detection)
+## Files Structure
+- `index.html` - Main application interface
+- `styles.css` - Styling and responsive design
+- `app.js` - Main application logic
+- `motifs.js` - Kolam motif drawing functions
+- `renderer.js` - Canvas rendering and animation
+- `gridUtils.js` - Grid creation and manipulation
+- `imageProcessor.js` - Basic image processing for dot detection
+- `analyzer.js` - Symmetry analysis functions
+- `netlify.toml` - Netlify deployment configuration
+
+## Browser Compatibility
+This application works in all modern browsers that support HTML5 Canvas and ES6 JavaScript features.
